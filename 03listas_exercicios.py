@@ -24,7 +24,7 @@ print(f"O número de alunos com média maior ou igual a 7.0 é: {alunos_aprovado
 '''
 medias = []
 
-for i in range(10):  # Vai pedir as notas de 10 alunos
+for i in range(10):
     print(f"Aluno {i + 1}:")
     nota1 = float(input("Digite a primeira nota: "))
     nota2 = float(input("Digite a segunda nota: "))
@@ -43,8 +43,8 @@ print(f"O número de alunos com média maior ou igual a 7.0 é: {alunos_aprovado
 
 #2
 '''nome = input('Digite o seu nome: ')
-nome_maiusculo = nome.upper() #Converte o nome para letras maiúsculas
-nome_invertido = nome_maiusculo[::-1] #Inverte o nome
+nome_maiusculo = nome.upper() 
+nome_invertido = nome_maiusculo[::-1] 
 print("Nome de trás para frente:", nome_invertido)'''
 
 #3
