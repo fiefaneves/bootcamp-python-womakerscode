@@ -14,7 +14,6 @@ cursor.execute('INSERT INTO alunos(id, nome, idade, curso) VALUES (4,"Diana", 22
 cursor.execute('INSERT INTO alunos(id, nome, idade, curso) VALUES (5,"Eduardo", 30, "Engenharia")')
 cursor.execute('INSERT INTO alunos(id, nome, idade, curso) VALUES (6,"Fernando", 19, "Engenharia")')'''
 
-
 #ConsultasBásicas
 #Selecionartodososregistrosdatabela"alunos".
 '''dados = cursor.execute('SELECT * FROM alunos')
@@ -45,7 +44,8 @@ for alunos in dados:
 
 #CriarumaTabelaeInserirDados
 #Crieumatabelachamada"clientes"comoscampos:id(chaveprimária),nome(texto),idade(inteiro)esaldo(float).
-#cursor.execute('CREATE TABLE clientes(id SERIAL PRIMARY KEY, nome VARCHAR(100), idade INT, saldo FLOAT);')
+#cursor.execute('CREATE TABLE clientes(id INTEGER PRIMARY KEY, nome VARCHAR(100), idade INT, saldo FLOAT);')
+
 #Insiraalgunsregistrosdeclientesnatabela
 '''cursor.execute('INSERT INTO clientes(id, nome, idade, saldo) VALUES (1, "Alberto", 37, 1500)')
 cursor.execute('INSERT INTO clientes(id, nome, idade, saldo) VALUES (2, "Bruna", 22, 10500)')
@@ -83,7 +83,7 @@ for clientes in dados:
 
 #JunçãodeTabelas
 #Crieumasegundatabelachamada"compras"comoscampos:id(chaveprimária),cliente_id(chaveestrangeirareferenciandooiddatabela"clientes"),produto(texto)evalor(real)
-#cursor.execute('CREATE TABLE compras(id SERIAL PRIMARY KEY, cliente_id INT REFERENCES clientes(id), produto VARCHAR(100), valor REAL);')
+#cursor.execute('CREATE TABLE compras(id INTEGER PRIMARY KEY, cliente_id INT, produto VARCHAR(100), valor FLOAT, CONSTRAINT fk_clientes FOREING KEY (clientes_id) REFERENCES clientes(id));')
 
 #Insiraalgumascomprasassociadasaclientesexistentesnatabela"clientes".
 '''cursor.execute('INSERT INTO compras(id, cliente_id, produto, valor) VALUES (1, 1, "Armário", 100.00)')
