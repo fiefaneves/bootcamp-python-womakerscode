@@ -1,0 +1,1 @@
+Exercícios Desafio 5:  Explore o espaço com o Python e o Visual Studio Code foi enviado em outro repositório: https://github.com/fiefaneves/codespaces-jupyter-bootcamp-WoMakersCode
