@@ -1,0 +1,27 @@
+{% extends "layout.html" %} 
+
+{% block content %}
+<div class="row">
+    <h1>Episódios de Rick and Morty</h1>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Data de lançamento</th>
+            <th scope="col">Código</th>
+          </tr>
+        </thead>
+        <tbody>
+        {% for episode in episodes%}  
+          <tr>
+            <th scope="row">{{ episode.id }}</th>
+            <td><a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="episodios/{{episode.id}}">{{ episode.name }}</a></td>
+            <td>{{ episode.air_date }}</td>
+            <td>{{ episode.episode }}</td>
+          </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

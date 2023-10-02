@@ -1,0 +1,29 @@
+{% extends "layout.html" %} 
+
+{% block content %}
+<div class="row">
+    <h1>Localizações de Rick and Morty</h1>
+    
+    {% for location in locations %}
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Tipo</th>
+            <th scope="col">Dimensão</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">{{ location.id }}</th>
+            <td><a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="localizacoes/{{location.id}}">{{ location.name }}</a></td>
+            <td>{{ location.type }}</td>
+            <td>{{ location.dimension }}</td>
+          </tr>
+        </tbody>
+    </table>
+    {% endfor %}
+
+</div>
+{% endblock %}
