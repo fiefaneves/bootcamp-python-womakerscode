@@ -1,0 +1,1 @@
+[DESAFIO 6] Criar aplicação Serverless (Azure) foi enviado em outro repositório: https://github.com/fiefaneves/serverless-full-stack-apps-azure-sql
